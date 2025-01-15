@@ -39,7 +39,7 @@ Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOP
 ## Statusas
 
 - [x] Alfa: Bandome "Supabase" su uždaru klientų rinkiniu
-- [x] Viešoji Alfa versija: [app.supabase.com](https://app.supabase.com). Tačiau neskubėkite su mumis, yra keletas trūkumų
+- [x] Viešoji Alfa versija: [supabase.com/dashboard](https://supabase.com/dashboard). Tačiau neskubėkite su mumis, yra keletas trūkumų
 - [x] Viešoji beta versija: Pakankamai stabili daugeliui ne įmonių naudojimo atvejų
 - [ ] Vieša: Bendras prieinamumas [[statusas](https://supabase.com/docs/guides/getting-started/features#feature-status)]
 
@@ -55,10 +55,10 @@ Norėdami sužinoti, kaip prisidėti, apsilankykite [Getting Started](../DEVELOP
 
 **Architektūra**
 
-Supabase yra [prieglobos platforma](https://app.supabase.com). Galite užsiregistruoti ir pradėti naudotis "Supabase" nieko neįdiegę.
+Supabase yra [prieglobos platforma](https://supabase.com/dashboard). Galite užsiregistruoti ir pradėti naudotis "Supabase" nieko neįdiegę.
 Taip pat galite [savarankiškai talpinti](https://supabase.com/docs/guides/hosting/overview) ir [kurti vietoje](https://supabase.com/docs/guides/local-development).
 
-![Architektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.png)
+![Architektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) - tai objektinė-reliacinė duomenų bazių sistema, aktyviai plėtojama daugiau kaip 30 metų, todėl ji pelnė gerą reputaciją dėl patikimumo, funkcijų tvirtumo ir našumo.
 - [Realtime](https://github.com/supabase/realtime) - tai "Elixir" serveris, leidžiantis klausytis "PostgreSQL" įterpimų, atnaujinimų ir ištrynimų naudojant žiniatinklio lizdus. "Realtime" apklausia "Postgres" integruotą replikavimo funkciją dėl duomenų bazės pakeitimų, konvertuoja pakeitimus į JSON ir transliuoja JSON per žiniatinklio lizdus įgaliotiems klientams.
@@ -247,7 +247,7 @@ Mūsų požiūris į klientų bibliotekas yra modulinis. Kiekviena dalinė bibli
 - [Supaprastinta kinų kalba / 简体中文](/i18n/README.zh-cn.md)
 - [švedų kalba / Svenska](/i18n/README.sv.md)
 - [Thai / ไทย](/i18n/README.th.md)
-- [Tradicinė kinų kalba / 繁体中文](/i18n/README.zh-tw.md)
+- [Tradicinė kinų kalba / 繁體中文](/i18n/README.zh-tw.md)
 - [Turkų kalba](/i18n/README.tr.md)
 - [Ukrainiečių kalba / Українська](/i18n/README.uk.md)
 - [Vietnamiečių kalba / Tiếng Việt](/i18n/README.vi-vn.md)
