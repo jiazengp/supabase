@@ -1,8 +1,10 @@
-import React from 'react'
-import { Button } from '../../../index'
+'use client'
+
 import * as Dialog from '@radix-ui/react-dialog'
+import React from 'react'
+import { Button } from '../../components/Button/Button'
+import { Tooltip, TooltipContent, TooltipTrigger } from '../../components/shadcn/ui/tooltip'
 import styleHandler from '../../lib/theme/styleHandler'
-import * as Tooltip from '@radix-ui/react-tooltip'
 
 export type SidePanelProps = RadixProps & CustomProps
 
@@ -24,7 +26,7 @@ interface CustomProps {
   children?: React.ReactNode
   header?: string | React.ReactNode
   visible: boolean
-  size?: 'medium' | 'large' | 'xlarge' | 'xxlarge'
+  size?: 'medium' | 'large' | 'xlarge' | 'xxlarge' | 'xxxlarge' | 'xxxxlarge'
   loading?: boolean
   align?: 'right' | 'left'
   hideFooter?: boolean
@@ -61,10 +63,6 @@ const SidePanel = ({
 }: SidePanelProps) => {
   const __styles = styleHandler('sidepanel')
 
-  // function stopPropagation(e: React.MouseEvent) {
-  //   e.stopPropagation()
-  // }
-
   const footerContent = customFooter ? (
     customFooter
   ) : (
@@ -74,35 +72,23 @@ const SidePanel = ({
           {cancelText}
         </Button>
       </div>
-      <Tooltip.Root delayDuration={0}>
-        <Tooltip.Trigger asChild>
-          <div>
-            <Button
-              htmlType="submit"
-              disabled={disabled || loading}
-              loading={loading}
-              onClick={() => (onConfirm ? onConfirm() : null)}
-            >
-              {confirmText}
-            </Button>
-          </div>
-        </Tooltip.Trigger>
-        {tooltip !== undefined && (
-          <Tooltip.Portal>
-            <Tooltip.Content side="bottom">
-              <Tooltip.Arrow className="radix-tooltip-arrow" />
-              <div
-                className={[
-                  'rounded bg-scale-100 py-1 px-2 leading-none shadow',
-                  'border border-scale-200',
-                ].join(' ')}
+      {onConfirm !== undefined && (
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <span className="inline-block">
+              <Button
+                htmlType="submit"
+                disabled={disabled || loading}
+                loading={loading}
+                onClick={() => (onConfirm ? onConfirm() : null)}
               >
-                <span className="text-xs text-scale-1200">{tooltip}</span>
-              </div>
-            </Tooltip.Content>
-          </Tooltip.Portal>
-        )}
-      </Tooltip.Root>
+                {confirmText}
+              </Button>
+            </span>
+          </TooltipTrigger>
+          {tooltip !== undefined && <TooltipContent side="bottom">{tooltip}</TooltipContent>}
+        </Tooltip>
+      )}
     </div>
   )
 
@@ -121,7 +107,9 @@ const SidePanel = ({
   return (
     <Dialog.Root open={open} onOpenChange={handleOpenChange} defaultOpen={defaultOpen}>
       {triggerElement && (
-        <Dialog.Trigger className={__styles.trigger}>{triggerElement}</Dialog.Trigger>
+        <Dialog.Trigger asChild className={__styles.trigger}>
+          {triggerElement}
+        </Dialog.Trigger>
       )}
 
       <Dialog.Portal>

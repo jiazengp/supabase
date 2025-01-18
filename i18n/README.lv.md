@@ -39,7 +39,7 @@ Lai uzzinātu, kā veikt iemaksas, apmeklējiet [Getting Started](../DEVELOPERS.
 ## Statuss
 
 - [x] Alfa: Mēs testējam Supabase ar slēgtu klientu kopu
-- [x] Publiskā alfa versija: [app.supabase.com](https://app.supabase.com). Bet nesteidzieties, ir dažas nepilnības
+- [x] Publiskā alfa versija: [supabase.com/dashboard](https://supabase.com/dashboard). Bet nesteidzieties, ir dažas nepilnības
 - [x] Publiskā beta versija: Pietiekami stabila lielākajai daļai ar uzņēmumu nesaistītu lietošanas gadījumu
 - [ ] Publisks: Vispārēja pieejamība [[statuss](https://supabase.com/docs/guides/getting-started/features#feature-status)]]
 
@@ -55,10 +55,10 @@ Supabase ir atvērtā koda rīku kombinācija. Mēs veidojam Firebase funkcijas,
 
 **Arhitektūra**
 
-Supabase ir [izvietota platforma](https://app.supabase.com). Jūs varat reģistrēties un sākt izmantot Supabase, neko neinstalējot.
+Supabase ir [izvietota platforma](https://supabase.com/dashboard). Jūs varat reģistrēties un sākt izmantot Supabase, neko neinstalējot.
 Jūs varat arī [pašmāju resursus](https://supabase.com/docs/guides/hosting/overview) un [izstrādāt lokāli](https://supabase.com/docs/guides/local-development).
 
-![Arhitektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.png)
+![Arhitektūra](https://github.com/supabase/supabase/blob/master/apps/docs/public/img/supabase-architecture.svg)
 
 - [PostgreSQL](https://www.postgresql.org/) ir objekt-relatīvo datubāzu sistēma, kas aktīvi tiek attīstīta vairāk nekā 30 gadus, un tā ir ieguvusi labu reputāciju uzticamības, funkciju robustuma un veiktspējas ziņā.
 - [Realtime](https://github.com/supabase/realtime) ir Elixir serveris, kas ļauj klausīties PostgreSQL ievadi, atjauninājumi un dzēšana, izmantojot websockets. Realtime aptaujā Postgres iebūvēto replikācijas funkcionalitāti par izmaiņām datubāzē, konvertē izmaiņas JSON un pēc tam pārraida JSON pa websockets autorizētiem klientiem.
@@ -247,7 +247,7 @@ Mūsu pieeja klientu bibliotēkām ir modulāra. Katra apakšbibliotēka ir atse
 - [Vienkāršotā ķīniešu valoda / 简体中文](/i18n/README.zh-cn.md)
 - [zviedru valodā / Svenska](/i18n/README.sv.md)
 - [Thai / ไทย](/i18n/README.th.md)
-- [Tradicionālā ķīniešu valoda / 繁体中文](/i18n/README.zh-tw.md)
+- [Tradicionālā ķīniešu valoda / 繁體中文](/i18n/README.zh-tw.md)
 - [Turkish / Türkçe](/i18n/README.tr.md)
 - [ukraiņu / Українська](/i18n/README.uk.md)
 - [Vjetnamiešu / Tiếng Việt](/i18n/README.vi-vn.md)

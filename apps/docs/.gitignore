@@ -23,3 +23,9 @@ yarn-error.log*
 **/*/generated/**/*
 !**/*/generated/.gitkeep
 !**/*/generated/**/.gitkeep
+
+# Sitemap
+public/sitemap.xml
+
+# Copied examples folder
+/examples/
